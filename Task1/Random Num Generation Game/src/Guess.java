@@ -15,67 +15,49 @@ class Guess extends JFrame {
 
     public Guess() {
         Container c = getContentPane();
-
-        // Set absolute layout
         c.setLayout(null);
 
-        // Set Background Color
-
-        // Creating image
-        // JLabel lblpic = new JLabel("");
-        // lblpic.setIcon(new ImageIcon("images.jpg"));
-        // lblpic.setBounds(0, 0, 500, 350);
-
-        // Creating label Guess my number text
         JLabel j = new JLabel("Guess my number game . . . ");
         j.setForeground(Color.RED);
         j.setFont(new Font("tunga", Font.BOLD, 36));
         j.setSize(370, 50);
         j.setLocation(130, 80);
 
-        // Creating label Enter a number.....
         JLabel j1 = new JLabel("Enter a number b/w 1-100");
         j1.setFont(new Font("tunga", Font.PLAIN, 25));
         j1.setSize(320, 30);
         j1.setLocation(40, 160);
 
-        // Creating TextField for input guess
         t1 = new JTextField(10);
         t1.setSize(80, 30);
         t1.setLocation(400, 160);
 
-        // Creating Label for Display message
         j4 = new JLabel("Try and guess my number");
         j4.setFont(new Font("tunga", Font.BOLD, 25));
         j4.setSize(300, 35);
         j4.setLocation(150, 230);
 
-        // Creating Text field for best score
         t2 = new JTextField(10);
         t2.setSize(70, 30);
         t2.setLocation(10, 10);
 
-        // Creating Label for best score
         JLabel j5 = new JLabel("Best Score");
         j5.setFont(new Font("tunga", Font.PLAIN, 27));
         j5.setForeground(Color.MAGENTA);
         j5.setSize(270, 30);
         j5.setLocation(90, 9);
 
-        // Creating guess text field
         t3 = new JTextField(10);
         t3.setSize(50, 30);
 
         t3.setLocation(400, 10);
 
-        // Creating guess Label
         JLabel j6 = new JLabel("Guesses");
         j6.setFont(new Font("tunga", Font.PLAIN, 27));
         j6.setForeground(Color.MAGENTA);
         j6.setSize(270, 30);
         j6.setLocation(460, 9);
 
-        // creating 3 buttons
         JButton b1 = new JButton("Guess");
         b1.setSize(150, 40);
         b1.setLocation(200, 280);
@@ -98,10 +80,8 @@ class Guess extends JFrame {
         bl3 = new ButtonListener3();
         b3.addActionListener(bl3);
 
-        // Place the components in the pane
         c.add(j5);
         c.add(j4);
-        // c.add(lblpic);
         c.add(j);
         c.add(j1);
         c.add(t1);
@@ -112,14 +92,11 @@ class Guess extends JFrame {
         c.add(b3);
         c.add(j6);
 
-        // Changing TextFields to UnEditable
         t2.setEditable(false);
         t3.setEditable(false);
 
-        // Set the title of the window
         setTitle("GUESS MY NUMBER");
 
-        // Set the size of the window and display it
         setSize(600, 450);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
